@@ -1,0 +1,126 @@
+module BCH_64_56_encode (
+    input wire       I_clk,
+    input wire[55:0] I_data_in,
+    output reg[7:0]  O_bch_ecc_out
+);
+
+    wire[7:0] S_ecc_init = 'd0;
+    wire[7:0] S_ecc_1;
+    wire[7:0] S_ecc_2;
+    wire[7:0] S_ecc_3;
+    wire[7:0] S_ecc_4;
+    wire[7:0] S_ecc_5;
+    wire[7:0] S_ecc_6;
+    wire[7:0] S_ecc_7;
+    wire[7:0] S_ecc_8;
+    wire[7:0] S_ecc_9;
+    wire[7:0] S_ecc_10;
+    wire[7:0] S_ecc_11;
+    wire[7:0] S_ecc_12;
+    wire[7:0] S_ecc_13;
+    wire[7:0] S_ecc_14;
+    wire[7:0] S_ecc_15;
+    wire[7:0] S_ecc_16;
+    wire[7:0] S_ecc_17;
+    wire[7:0] S_ecc_18;
+    wire[7:0] S_ecc_19;
+    wire[7:0] S_ecc_20;
+    wire[7:0] S_ecc_21;
+    wire[7:0] S_ecc_22;
+    wire[7:0] S_ecc_23;
+    wire[7:0] S_ecc_24;
+    wire[7:0] S_ecc_25;
+    wire[7:0] S_ecc_26;
+    wire[7:0] S_ecc_27;
+    wire[7:0] S_ecc_28;
+    wire[7:0] S_ecc_29;
+    wire[7:0] S_ecc_30;
+    wire[7:0] S_ecc_31;
+    wire[7:0] S_ecc_32;
+    wire[7:0] S_ecc_33;
+    wire[7:0] S_ecc_34;
+    wire[7:0] S_ecc_35;
+    wire[7:0] S_ecc_36;
+    wire[7:0] S_ecc_37;
+    wire[7:0] S_ecc_38;
+    wire[7:0] S_ecc_39;
+    wire[7:0] S_ecc_40;
+    wire[7:0] S_ecc_41;
+    wire[7:0] S_ecc_42;
+    wire[7:0] S_ecc_43;
+    wire[7:0] S_ecc_44;
+    wire[7:0] S_ecc_45;
+    wire[7:0] S_ecc_46;
+    wire[7:0] S_ecc_47;
+    wire[7:0] S_ecc_48;
+    wire[7:0] S_ecc_49;
+    wire[7:0] S_ecc_50;
+    wire[7:0] S_ecc_51;
+    wire[7:0] S_ecc_52;
+    wire[7:0] S_ecc_53;
+    wire[7:0] S_ecc_54;
+    wire[7:0] S_ecc_55;
+    wire[7:0] S_ecc_56;
+
+    assign S_ecc_1 =  (S_ecc_init >> 1) ^ (I_data_in[0]  ^ S_ecc_init[0] ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_2 =  (S_ecc_1 >> 1)    ^ (I_data_in[1]  ^ S_ecc_1[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_3 =  (S_ecc_2 >> 1)    ^ (I_data_in[2]  ^ S_ecc_2[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_4 =  (S_ecc_3 >> 1)    ^ (I_data_in[3]  ^ S_ecc_3[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_5 =  (S_ecc_4 >> 1)    ^ (I_data_in[4]  ^ S_ecc_4[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_6 =  (S_ecc_5 >> 1)    ^ (I_data_in[5]  ^ S_ecc_5[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_7 =  (S_ecc_6 >> 1)    ^ (I_data_in[6]  ^ S_ecc_6[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_8 =  (S_ecc_7 >> 1)    ^ (I_data_in[7]  ^ S_ecc_7[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_9 =  (S_ecc_8 >> 1)    ^ (I_data_in[8]  ^ S_ecc_8[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_10 = (S_ecc_9 >> 1)    ^ (I_data_in[9]  ^ S_ecc_9[0]    ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_11 = (S_ecc_10 >> 1)   ^ (I_data_in[10] ^ S_ecc_10[0]   ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_12 = (S_ecc_11 >> 1)   ^ (I_data_in[11] ^ S_ecc_11[0]   ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_13 = (S_ecc_12 >> 1)   ^ (I_data_in[12] ^ S_ecc_12[0]   ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_14 = (S_ecc_13 >> 1)   ^ (I_data_in[13] ^ S_ecc_13[0]   ? 8'b10000011 : 8'h00000000); 
+    assign S_ecc_15 = (S_ecc_14 >> 1)   ^ (I_data_in[14] ^ S_ecc_14[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_16 = (S_ecc_15 >> 1)   ^ (I_data_in[15] ^ S_ecc_15[0]   ? 8'b10000011 : 8'h00000000);  
+    assign S_ecc_17 = (S_ecc_16 >> 1)   ^ (I_data_in[16] ^ S_ecc_16[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_18 = (S_ecc_17 >> 1)   ^ (I_data_in[17] ^ S_ecc_17[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_19 = (S_ecc_18 >> 1)   ^ (I_data_in[18] ^ S_ecc_18[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_20 = (S_ecc_19 >> 1)   ^ (I_data_in[19] ^ S_ecc_19[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_21 = (S_ecc_20 >> 1)   ^ (I_data_in[20] ^ S_ecc_20[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_22 = (S_ecc_21 >> 1)   ^ (I_data_in[21] ^ S_ecc_21[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_23 = (S_ecc_22 >> 1)   ^ (I_data_in[22] ^ S_ecc_22[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_24 = (S_ecc_23 >> 1)   ^ (I_data_in[23] ^ S_ecc_23[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_25 = (S_ecc_24 >> 1)   ^ (I_data_in[24] ^ S_ecc_24[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_26 = (S_ecc_25 >> 1)   ^ (I_data_in[25] ^ S_ecc_25[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_27 = (S_ecc_26 >> 1)   ^ (I_data_in[26] ^ S_ecc_26[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_28 = (S_ecc_27 >> 1)   ^ (I_data_in[27] ^ S_ecc_27[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_29 = (S_ecc_28 >> 1)   ^ (I_data_in[28] ^ S_ecc_28[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_30 = (S_ecc_29 >> 1)   ^ (I_data_in[29] ^ S_ecc_29[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_31 = (S_ecc_30 >> 1)   ^ (I_data_in[30] ^ S_ecc_30[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_32 = (S_ecc_31 >> 1)   ^ (I_data_in[31] ^ S_ecc_31[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_33 = (S_ecc_32 >> 1)   ^ (I_data_in[32] ^ S_ecc_32[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_34 = (S_ecc_33 >> 1)   ^ (I_data_in[33] ^ S_ecc_33[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_35 = (S_ecc_34 >> 1)   ^ (I_data_in[34] ^ S_ecc_34[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_36 = (S_ecc_35 >> 1)   ^ (I_data_in[35] ^ S_ecc_35[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_37 = (S_ecc_36 >> 1)   ^ (I_data_in[36] ^ S_ecc_36[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_38 = (S_ecc_37 >> 1)   ^ (I_data_in[37] ^ S_ecc_37[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_39 = (S_ecc_38 >> 1)   ^ (I_data_in[38] ^ S_ecc_38[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_40 = (S_ecc_39 >> 1)   ^ (I_data_in[39] ^ S_ecc_39[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_41 = (S_ecc_40 >> 1)   ^ (I_data_in[40] ^ S_ecc_40[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_42 = (S_ecc_41 >> 1)   ^ (I_data_in[41] ^ S_ecc_41[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_43 = (S_ecc_42 >> 1)   ^ (I_data_in[42] ^ S_ecc_42[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_44 = (S_ecc_43 >> 1)   ^ (I_data_in[43] ^ S_ecc_43[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_45 = (S_ecc_44 >> 1)   ^ (I_data_in[44] ^ S_ecc_44[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_46 = (S_ecc_45 >> 1)   ^ (I_data_in[45] ^ S_ecc_45[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_47 = (S_ecc_46 >> 1)   ^ (I_data_in[46] ^ S_ecc_46[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_48 = (S_ecc_47 >> 1)   ^ (I_data_in[47] ^ S_ecc_47[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_49 = (S_ecc_48 >> 1)   ^ (I_data_in[48] ^ S_ecc_48[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_50 = (S_ecc_49 >> 1)   ^ (I_data_in[49] ^ S_ecc_49[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_51 = (S_ecc_50 >> 1)   ^ (I_data_in[50] ^ S_ecc_50[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_52 = (S_ecc_51 >> 1)   ^ (I_data_in[51] ^ S_ecc_51[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_53 = (S_ecc_52 >> 1)   ^ (I_data_in[52] ^ S_ecc_52[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_54 = (S_ecc_53 >> 1)   ^ (I_data_in[53] ^ S_ecc_53[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_55 = (S_ecc_54 >> 1)   ^ (I_data_in[54] ^ S_ecc_54[0]   ? 8'b10000011 : 8'h00000000);
+    assign S_ecc_56 = (S_ecc_55 >> 1)   ^ (I_data_in[55] ^ S_ecc_55[0]   ? 8'b10000011 : 8'h00000000);
+    
+    always @(posedge I_clk) begin
+        O_bch_ecc_out <= S_ecc_56;
+    end
+
+endmodule
